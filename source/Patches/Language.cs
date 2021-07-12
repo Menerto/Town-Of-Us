@@ -1,6 +1,6 @@
-using System;
 using System.Collections.Generic;
 using System.IO;
+using UnityEngine;
 
 namespace TownOfUs
 {
@@ -16,11 +16,7 @@ namespace TownOfUs
 		public static Language Current = Default;
 
 		public static List<Language> List = new List<Language>{ English, Polish };
-		public static readonly string Location = Path.Combine
-		(
-			Environment.GetFolderPath(Environment.SpecialFolder.UserProfile),
-			@"AppData\LocalLow\Innersloth\Among Us\language"
-		);
+		public static readonly string Location = Path.Combine(Application.persistentDataPath, "language");
 
 		public static Language Load()
 		{
