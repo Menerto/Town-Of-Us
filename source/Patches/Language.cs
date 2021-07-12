@@ -52,17 +52,18 @@ namespace TownOfUs
 
 			File.WriteAllText(Location, language.Name);
 		}
-
-		public enum Dictionary
-		{
-
-		}
 	}
 
 	public static partial class LanguageExtensions
 	{
-		public static string Translate(this Language.Dictionary key) => key switch {
-			_ => key.ToString(),
-		};
+		public static string Translate(this string key)
+		{
+			Language.Current = Language.Load();
+			return Language.Current.Name switch {
+				nameof(Language.English) => Patches.Locale.English.Translations.TryGetValue(key, out var value) ? value : key.ToString(),
+				nameof(Language.Polish) => Patches.Locale.Polish.Translations.TryGetValue(key, out var value) ? value : key.ToString(),
+				_ => key.ToString(),
+			};
+		}
 	}
 }
