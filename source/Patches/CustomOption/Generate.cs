@@ -271,7 +271,7 @@ namespace TownOfUs.CustomOption
 				new CustomToggleOption(num++, "Mayor Votes Show Anonymous", false);
 
 			Lovers =
-				new CustomHeaderOption(num++, "<color=#FF66CCFF>Lovers</color>");
+				new CustomHeaderOption(num++, $"<color=#FF66CCFF>{"Lovers".Translate()}</color>");
 			BothLoversDie = new CustomToggleOption(num++, "Both Lovers Die");
 
 			Sheriff =

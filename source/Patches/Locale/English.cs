@@ -8,6 +8,7 @@ namespace TownOfUs.Patches.Locale
 		{
 			{"RoleName_Altruist", "Altruist"},
 			{"MayorOptions_InitialMayorVoteBank", "Initial Mayor Vote Bank"},
+			{"Lovers", "Lovers"},
 		};
 	}
 }
