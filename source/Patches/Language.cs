@@ -55,11 +55,19 @@ namespace TownOfUs
 		public static string Translate(this string key)
 		{
 			Language.Current = Language.Load();
-			return Language.Current.Name switch {
-				nameof(Language.English) => Patches.Locale.English.Translations.TryGetValue(key, out var value) ? value : key.ToString(),
-				nameof(Language.Polish) => Patches.Locale.Polish.Translations.TryGetValue(key, out var value) ? value : key.ToString(),
-				_ => key.ToString(),
-			};
+
+			string value;
+			switch (Language.Current.Name) {
+				default:
+				case nameof(Language.English):
+					return Patches.Locale.English.Translations.TryGetValue(key, out value) ? value : key.ToString();
+
+				case nameof(Language.Polish):
+					if (Patches.Locale.Polish.Translations.TryGetValue(key, out value))
+						return value;
+					else
+						goto default;
+			}
 		}
 	}
 }
