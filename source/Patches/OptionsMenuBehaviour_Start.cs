@@ -76,7 +76,7 @@ namespace TownOfUs
 					continue;
 
 				button.Background.color = color;
-				button.Text.text = language.Name + ": " + (current ? "on" : "off");
+				button.Text.text = $"{language.Name}: {(current ? "on" : "off")}";
 				button.Rollover?.ChangeOutColor(color);
 			}
 		}
