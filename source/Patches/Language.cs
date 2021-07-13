@@ -55,9 +55,13 @@ namespace TownOfUs
 		public static string Translate(this string key)
 		{
 			Language.Current = Language.Load();
+			return Translate(key, Language.Current);
+		}
 
+		public static string Translate(this string key, Language language)
+		{
 			string value;
-			switch (Language.Current.Name) {
+			switch (language.Name) {
 				default:
 				case nameof(Language.English):
 					return Patches.Locale.English.Translations.TryGetValue(key, out value) ? value : key.ToString();
