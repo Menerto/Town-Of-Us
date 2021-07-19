@@ -7,9 +7,9 @@ namespace TownOfUs.Roles
     {
         public Sheriff(PlayerControl player) : base(player)
         {
-            Name = "Sheriff";
-            ImpostorText = () => "Shoot the <color=#FF0000FF>Impostor</color>";
-            TaskText = () => "Kill off the impostor but don't kill crewmates.";
+            Name = "Sheriff".Translate();
+            ImpostorText = () => "SheriffStartGameText".Translate();
+            TaskText = () => "SheriffGameTaskText".Translate();
             Color = Color.yellow;
             RoleType = RoleEnum.Sheriff;
         }

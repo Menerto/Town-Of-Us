@@ -8,9 +8,9 @@ namespace TownOfUs.Roles
 
         public Child(PlayerControl player) : base(player)
         {
-            Name = "Child";
-            ImpostorText = () => "No one will harm you";
-            TaskText = () => "You won't be harmed";
+            Name = "Child".Translate();
+            ImpostorText = () => "ChildStartGameText".Translate();
+            TaskText = () => "ChildGameTaskText".Translate();
             Color = Color.white;
             RoleType = RoleEnum.Child;
         }

@@ -6,9 +6,9 @@ namespace TownOfUs.Roles
     {
         public Engineer(PlayerControl player) : base(player)
         {
-            Name = "Engineer";
-            ImpostorText = () => "Maintain important systems on the ship";
-            TaskText = () => "Vent and fix a sabotage from anywhere!";
+            Name = "Engineer".Translate();
+            ImpostorText = () => "EngineerStartGameText".Translate();
+            TaskText = () => "EngineerGameTaskText".Translate();
             Color = new Color(1f, 0.65f, 0.04f, 1f);
             RoleType = RoleEnum.Engineer;
         }

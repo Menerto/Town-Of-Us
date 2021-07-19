@@ -14,9 +14,9 @@ namespace TownOfUs.Roles
 
         public Miner(PlayerControl player) : base(player)
         {
-            Name = "Miner";
-            ImpostorText = () => "From the top, make it drop, that's a vent";
-            TaskText = () => "From the top, make it drop, that's a vent";
+            Name = "Miner".Translate();
+            ImpostorText = () => "MinerStartGameText".Translate();
+            TaskText = () => "MinerGameTaskText".Translate();
             Color = Palette.ImpostorRed;
             RoleType = RoleEnum.Miner;
             Faction = Faction.Impostors;

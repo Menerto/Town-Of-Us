@@ -17,12 +17,12 @@ namespace TownOfUs.Roles
 
         public Snitch(PlayerControl player) : base(player)
         {
-            Name = "Snitch";
-            ImpostorText = () => "Complete all your tasks to discover the Impostors";
+            Name = "Snitch".Translate();
+            ImpostorText = () => "SnitchStartGameText".Translate();
             TaskText = () =>
                 TasksDone
-                    ? "Find the arrows pointing to the Impostors!"
-                    : "Complete all your tasks to discover the Impostors!";
+                    ? "SnitchGameTaskText1".Translate()
+                    : "SnitchGameTaskText2".Translate();
             Color = new Color(0.83f, 0.69f, 0.22f, 1f);
             Hidden = !CustomGameOptions.SnitchOnLaunch;
             RoleType = RoleEnum.Snitch;

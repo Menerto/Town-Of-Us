@@ -8,9 +8,9 @@ namespace TownOfUs.Roles
     {
         public TimeLord(PlayerControl player) : base(player)
         {
-            Name = "Time Lord";
-            ImpostorText = () => "Rewind Time";
-            TaskText = () => "Rewind Time!";
+            Name = "Time Lord".Translate();
+            ImpostorText = () => "TimeLordStartGameText".Translate();
+            TaskText = () => "TimeLordGameTaskText".Translate();
             Color = new Color(0f, 0f, 1f, 1f);
             RoleType = RoleEnum.TimeLord;
             Scale = 1.4f;

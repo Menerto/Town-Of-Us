@@ -7,9 +7,9 @@ namespace TownOfUs.Roles
     {
         public Shifter(PlayerControl player) : base(player)
         {
-            Name = "Shifter";
-            ImpostorText = () => "Shift around different roles";
-            TaskText = () => "Steal other people's roles.\nFake Tasks:";
+            Name = "Shifter".Translate();
+            ImpostorText = () => "ShifterStartGameText".Translate();
+            TaskText = () => "ShifterGameTaskText".Translate();
             Color = new Color(0.6f, 0.6f, 0.6f, 1f);
             RoleType = RoleEnum.Shifter;
             Faction = Faction.Neutral;

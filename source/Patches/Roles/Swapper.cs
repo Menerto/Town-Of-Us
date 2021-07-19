@@ -12,9 +12,9 @@ namespace TownOfUs.Roles
 
         public Swapper(PlayerControl player) : base(player)
         {
-            Name = "Swapper";
-            ImpostorText = () => "Swap the votes of two people";
-            TaskText = () => "Swap two people's votes and wreak havoc!";
+            Name = "Swapper".Translate();
+            ImpostorText = () => "SwapperStartGameText".Translate();
+            TaskText = () => "SwapperGameTaskText".Translate();
             Color = new Color(0.4f, 0.9f, 0.4f, 1f);
             RoleType = RoleEnum.Swapper;
         }

@@ -12,11 +12,11 @@ namespace TownOfUs.Roles
         public Lover(PlayerControl player, int num, bool loverImpostor) : base(player)
         {
             var imp = num == 2 && loverImpostor;
-            Name = imp ? "Loving Impostor" : "Lover";
+            Name = imp ? "LovingImp".Translate() : "Lover".Translate();
             Color = new Color(1f, 0.4f, 0.8f, 1f);
             ImpostorText = () =>
-                "You are in " + ColorString + "Love</color> with " + ColorString + OtherLover.Player.name;
-            TaskText = () => $"Stay alive with your love {OtherLover.Player.name} \n and win together";
+                "LoverStartGameText1".Translate() + ColorString + "LoverStartGameText2".Translate() + ColorString + OtherLover.Player.name;
+            TaskText = () => $"{"LoverGameTaskText1".Translate()} {OtherLover.Player.name} {"LoverGameTaskText2".Translate()}";
             RoleType = imp ? RoleEnum.LoverImpostor : RoleEnum.Lover;
             Num = num;
             LoverImpostor = loverImpostor;

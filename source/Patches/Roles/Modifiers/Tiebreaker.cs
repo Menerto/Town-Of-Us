@@ -6,8 +6,8 @@ namespace TownOfUs.Roles.Modifiers
     {
         public Tiebreaker(PlayerControl player) : base(player)
         {
-            Name = "Tiebreaker";
-            TaskText = () => "Your vote breaks ties";
+            Name = "Tiebreaker".Translate();
+            TaskText = () => "TiebreakerInfo".Translate();
             Color = new Color(0.6f, 0.9f, 0.6f);
             ModifierType = ModifierEnum.Tiebreaker;
         }

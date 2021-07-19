@@ -13,9 +13,9 @@ namespace TownOfUs.Roles
 
         public Camouflager(PlayerControl player) : base(player)
         {
-            Name = "Camouflager";
-            ImpostorText = () => "Camouflage and turn everyone grey";
-            TaskText = () => "Camouflage and get secret kills";
+            Name = "Camouflager".Translate();
+            ImpostorText = () => "CamouflagerStartGameText".Translate();
+            TaskText = () => "CamouflagerGameTaskText".Translate();
             Color = Palette.ImpostorRed;
             RoleType = RoleEnum.Camouflager;
             Faction = Faction.Impostors;

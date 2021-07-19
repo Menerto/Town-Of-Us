@@ -11,9 +11,9 @@ namespace TownOfUs.Roles
 
         public Seer(PlayerControl player) : base(player)
         {
-            Name = "Seer";
-            ImpostorText = () => "Investigate roles";
-            TaskText = () => "Investigate roles and find the Impostor";
+            Name = "Seer".Translate();
+            ImpostorText = () => "SeerStartGameText".Translate();
+            TaskText = () => "SeerGameTaskText".Translate();
             Color = new Color(1f, 0.8f, 0.5f, 1f);
             RoleType = RoleEnum.Seer;
         }

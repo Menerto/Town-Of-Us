@@ -74,8 +74,8 @@ namespace TownOfUs
             position.AdjustPosition();
 
             __instance.text.text =
-                "<color=#00FF00FF>TownOfUs v2.1.3</color>\n" +
-                "Available on <color=#BEA4FFFF>Polus.gg</color>\n" +
+                "GameVersionText".Translate() +
+                "AvailableOnText".Translate() +
                 $"Ping: {AmongUsClient.Instance.Ping}ms\n"/* +
                 (!MeetingHud.Instance
                     ? "<color=#00FF00FF>slushiegoose ft. edisonparklive</color>" +

@@ -6,8 +6,8 @@ namespace TownOfUs.Roles.Modifiers
     {
         public BigBoi(PlayerControl player) : base(player)
         {
-            Name = "Giant";
-            TaskText = () => "Super slow!";
+            Name = "Giant".Translate();
+            TaskText = () => "GiantInfo".Translate();
             Color = new Color(1f, 0.5f, 0.5f, 1f);
             ModifierType = ModifierEnum.BigBoi;
         }
